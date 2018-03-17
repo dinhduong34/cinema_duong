@@ -1,8 +1,28 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+} */
+
+.title{
+  color: greenyellow;
+  font-size: 50px
+}
+.menu ul{
+  list-style-type: none;
+  text-align: center;
+}
+.menu li {
+  color:white;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+.menu ul li a{
+  color: white;
 }

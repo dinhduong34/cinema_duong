@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.head-page{
+    background-color: black;
+    height: 100px;
+    padding: 0px;
+}
+.name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.menu{
+    background-color: gray;
+}

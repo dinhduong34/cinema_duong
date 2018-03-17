@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <% include ./share/head.ejs %>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/head.css">
+</head>
+
+<body>
+    <div class="head-page">
+        <div class="name">
+            <h1>CINEMA APPLICATION</h1>
+        </div>
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Comeback</a>
+                </li>
+                <li>
+                    <a href="#">Tạo mới Phim</a>
+                </li>
+                <li>
+                    <a href="#">Đăng Nhập</a>
+                </li>
+                <li>
+                    <a href="#">Đăng Ký</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <h1 class="text-center title" >Tạo phim mới</h1>
+    </div>
+
+    <div>
+        <form action="/api/CreateFilm" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <img id "image" src="/images/image.png" alt="err">
+                    </div>
+                    <div>
+                        <input type="file" value="Ảnh" id="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    Tên bộ phim:
+                    <br>
+                    <input type="text" name="NameFilm">
+                    <br> Thể loại phim:
+                    <br>
+                    <select name="StyleFilm" style="weight:100%">
+                        <option value="Tiểu sử Lịch sủ">tiểu sử lịch sử </option>
+                        <option value="LMTC">Lãng mạn tình cảm </option>
+                        <option value="KHVT">Khoa học viễn tưởng </option>
+                        <option value="HBHA">Huyền bí huyền ảo</option>
+                        <option value="PLMH">Phiêu lưu mạo hiểm</option>
+                        <option value="PLHS">Pháp luật hình sự</option>
+                        <option value="CTCT">Chiến tranh cổ trang</option>
+                        <option value="CTTD">Chiến tranh trung đại</option>
+                        <option value="CTHD">Chiến tranh hiện đại</option>
+                        <option value="KHCT">Kiếm hiệp, Cổ trang</option>
+                        <option value="TM">Thuyết minh</option>
+                        <option value="HH">Hoạt hình</option>
+                        <option value="MKD">Ma, kinh dị</option>
+                        <option value="KT">Kịch tính</option>
+                        <option value="HD">Hành động</option>
+                        <option value="SN">Sát Nhân</option>
+                        <option value="TT">Thể thao</option>
+                        <option value="VT">võ thuật</option>
+                        <option value="TL">Tâm lí</option>
+                        <option value="TA">Tội ác</option>
+                    </select>
+                    <br> Thời gian phát hành :
+                    <br>
+                    <table>
+                        <th>
+                            <select name="month">
+                                <option value="tháng 1">Tháng 1</option>
+                                <option value="tháng 2">Tháng 2</option>
+                                <option value="tháng 3">Tháng 3</optconsole.log("Ten Phim: " + req.body.NameFilm);
+                                    console.log("The Loai phim: " + req.body.StyleFilm)
+                                    console.log("Nam phat hanh phim: " +req.body.month + req.body.year);
+                                    console.log("Binh luan: " + req.body.Comment);ion>
+                                <option value="tháng 4">Tháng 4</option>
+                                <option value="tháng 5">Tháng 5</option>
+                                <option value="tháng 6">Tháng 6</option>
+                                <option value="tháng 7">Tháng 7</option>
+                                <option value="tháng 8">Tháng 8</option>
+                                <option value="tháng 9">Tháng 9</option>
+                                <option value="tháng 10">Tháng 10</option>
+                                <option value="tháng 11">Tháng 11</option>
+                                <option value="tháng 12">Tháng 12</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select name="year">
+                                <option>Năm 2015</option>
+                                <option>Năm 2016</option>
+                                <option>Năm 2017</option>
+                                <option>Năm 2018</option>
+                                <option>Năm 2019</option>
+                                <option>Năm 2014</option>
+                                <option>Năm 2013</option>
+                                <option>Năm 2012</option>
+                                <option>Năm 2011</option>
+                                <option>Năm 2010</option>
+                                <option>Năm 2009</option>
+                                <option>Năm 2008</option>
+                            </select>
+                        </th>
+                    </table>
+                    <br> Nội dung mô tả:
+                    <br>
+                    <textarea name="Comment" id="text" cols="60" rows="8">Điền thông tin bạn biết về bộ phim</textarea>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="text-center">
+                <input type="submit" value="Đăng Phim" id="submit">
+                <input type="submit" value="Bạn cần đăng nhập">
+            </div>
+
+        </form>
+      
+    </div>
+</body>
+
+</html>
