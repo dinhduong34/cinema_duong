@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.head-page{
+    background-color: black;
+    height: 100px;
+    padding: 0px;
+}
+.name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.menu{
+    background-color: gray;
+}
+
+.border{
+    border: 1px solid blue;
+    background-color: greenyellow;
+    height: 40%;
+    width: 30%;
+    float: left;
+    padding: 10px;
+    margin: 20px;
+}

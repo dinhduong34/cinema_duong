@@ -4,12 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose=require('mongoose');
+// var mongoose = require('mongoose'); // tìm hiểu tiếp phần này.
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var inputFilm = require('./routes/inputFilm');
-
+var inputFilm = require('./routes/inputFilm'); //khai bao
+var listFilm=require('./routes/listFilm')
+var todoController = require('./API/controller/todosController');
 var app = express();
 
 // view engine setup
@@ -26,15 +27,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/cinema',inputFilm);
-
-mongoose.connect("mongodb://cimena:123@ds215709.mlab.com:15709/duong-cinema");
-var Schema=mongoose.Schema();
-var InfSchema= new Schema({
-  NameFilm: String,
-styleFilm:String,
-coment:String,
-})
+app.use('/cinema', inputFilm);     // use
+app.use('/list',listFilm);
+todoController(app);
+// mongoose.connect("mongodb://cimena:123@ds215709.mlab.com:15709/duong-cinema");
+// var Schema = mongoose.Schema();
+// var InfSchema = new Schema({
+//   NameFilm: String,
+//   styleFilm: String,
+//   coment: String,
+// })
 
 
 

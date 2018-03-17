@@ -2,16 +2,29 @@
 
 <head>
     <% include ./share/head.ejs %>
+<<<<<<< HEAD
         <link rel="stylesheet" href="/stylesheets/tao-phim.css">
+=======
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/head.css">
+>>>>>>> master
 </head>
 
 <body>
     <div class="head-page">
+<<<<<<< HEAD
         <div class="logo">
             <h1>CINEMA APPLICATION</h1>
         </div>
     </div>
     <div class="under-head-page">
+=======
+        <div class="name">
+            <h1>CINEMA APPLICATION</h1>
+        </div>
+    </div>
+    <div class="menu">
+>>>>>>> master
         <nav>
             <ul>
                 <li>
@@ -33,24 +46,28 @@
         </nav>
     </div>
     <div>
-        <form action="/cinema" method="POST">
+        <h1 class="text-center title" >Tạo phim mới</h1>
+    </div>
+
+    <div>
+        <form action="/api/CreateFilm" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <div>
-                        <img src="/images/image1.png" alt="err">
+                        <img id "image" src="/images/image.png" alt="err">
                     </div>
                     <div>
                         <input type="file" value="Ảnh" id="">
                     </div>
                 </div>
                 <div class="col-md-6">
-                    Ten bo phim:
+                    Tên bộ phim:
                     <br>
                     <input type="text" name="NameFilm">
-                    <br> The Loai Phim:
+                    <br> Thể loại phim:
                     <br>
-                    <select name="styleFilm" style="weight:100%">
-                        <option value="TSLS">tiểu sử lịch sử </option>
+                    <select name="StyleFilm" style="weight:100%">
+                        <option value="Tiểu sử Lịch sủ">tiểu sử lịch sử </option>
                         <option value="LMTC">Lãng mạn tình cảm </option>
                         <option value="KHVT">Khoa học viễn tưởng </option>
                         <option value="HBHA">Huyền bí huyền ảo</option>
@@ -75,10 +92,20 @@
                     <br>
                     <table>
                         <th>
+<<<<<<< HEAD
                             <select name="year">
                                 <option value="tháng 1">Tháng 1</option>
                                 <option value="tháng 2">Tháng 2</option>
                                 <option value="tháng 3">Tháng 3</option>
+=======
+                            <select name="month">
+                                <option value="tháng 1">Tháng 1</option>
+                                <option value="tháng 2">Tháng 2</option>
+                                <option value="tháng 3">Tháng 3</optconsole.log("Ten Phim: " + req.body.NameFilm);
+                                    console.log("The Loai phim: " + req.body.StyleFilm)
+                                    console.log("Nam phat hanh phim: " +req.body.month + req.body.year);
+                                    console.log("Binh luan: " + req.body.Comment);ion>
+>>>>>>> master
                                 <option value="tháng 4">Tháng 4</option>
                                 <option value="tháng 5">Tháng 5</option>
                                 <option value="tháng 6">Tháng 6</option>
@@ -91,7 +118,11 @@
                             </select>
                         </th>
                         <th>
+<<<<<<< HEAD
                             <select>
+=======
+                            <select name="year">
+>>>>>>> master
                                 <option>Năm 2015</option>
                                 <option>Năm 2016</option>
                                 <option>Năm 2017</option>
@@ -109,11 +140,16 @@
                     </table>
                     <br> Nội dung mô tả:
                     <br>
+<<<<<<< HEAD
                     <textarea name="coment" id="text" cols="60" rows="8">Điền thông tin bạn biết về bộ phim</textarea>
+=======
+                    <textarea name="Comment" id="text" cols="60" rows="8">Điền thông tin bạn biết về bộ phim</textarea>
+>>>>>>> master
                 </div>
             </div>
             <br>
             <br>
+<<<<<<< HEAD
             <input type="submit" value="Đăng Phim" id="submit">
             <input type="submit" value="Bạn cần đăng nhập">
         </form>
@@ -122,6 +158,15 @@
         <div>
 
         </div>
+=======
+            <div class="text-center">
+                <input type="submit" value="Đăng Phim" id="submit">
+                <input type="submit" value="Bạn cần đăng nhập">
+            </div>
+
+        </form>
+      
+>>>>>>> master
     </div>
 </body>
 
