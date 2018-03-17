@@ -115,10 +115,10 @@ function getFilm(res) {
 
 
 module.exports = function (app) {
-    //get all todos
-    // app.get("/api/CreateFilm", function (req, res) {
-
-    // });
+    // get all todos
+    app.get("/api/CreateFilm", function (req, res) {
+            getFilm(res);
+    });
     app.post("/api/CreateFilm", function (req, res) {
         var Film = {
             NameFilm: req.body.NameFilm,

@@ -1,20 +1,24 @@
-<html>
+<html ng-app="app.todos">
 
 <head>
     <title> List Film</title>
     <% include ./share/head.ejs %>
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/head.css">
+        
+<script src="/javascripts/main/app.js"></script>
 </head>
 
 </html>
 
-<body>
+<body ng-controller="todoController">
+
     <div class="head-page">
         <div class="name">
             <h1>CINEMA APPLICATION</h1>
         </div>
     </div>
+
     <div class="menu">
         <nav>
             <ul>
@@ -35,5 +39,13 @@
                 </li>
             </ul>
         </nav>
+    </div>
+
+    <div ng-repeat="todo in todos ">
+        <p class="border">{{  }}</p>
+        
+
+
+
     </div>
 </body>
