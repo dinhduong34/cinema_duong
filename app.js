@@ -25,10 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+// app.use('/', index);
 app.use('/users', users);
 app.use('/cinema', inputFilm);     // use
-app.use('/list',listFilm);
+app.use('/',listFilm);
 todoController(app);
 // mongoose.connect("mongodb://cimena:123@ds215709.mlab.com:15709/duong-cinema");
 // var Schema = mongoose.Schema();

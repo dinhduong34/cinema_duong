@@ -8,6 +8,7 @@ app.controller("todoController", ['$scope', 'svTodos', function ($scope, svTodos
     //load data from api
 
     svTodos.get().then(function (res)  {
+        // console.log(res.data);
         $scope.todos = res.data;
         console.log($scope.todos);
         $scope.loading = false;

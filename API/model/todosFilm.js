@@ -6,7 +6,10 @@ var Schema=mongoose.Schema;
 var CreateFilm = new Schema({
     NameFilm: String,
     StyleFilm: String,
-    Comment: String
+    Comment: String,
+    Month: String,
+    Year:String
+
 });
 
 var Film=mongoose.model("Film", CreateFilm);

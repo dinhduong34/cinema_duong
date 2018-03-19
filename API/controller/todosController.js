@@ -123,13 +123,17 @@ module.exports = function (app) {
         var Film = {
             NameFilm: req.body.NameFilm,
             StyleFilm: req.body.StyleFilm,
-            Comment: req.body.Comment
+            Month: req.body.Month,
+            Year: req.body.Year,
+            Comment: req.body.Comment,
+          
         };
         Films.create(Film, function (err, Film) {
             if (err) {
                 throw err;
-            } else {
-                getFilm(res);
+            } else {    
+                // getFilm(res);
+                res.redirect("/");
             }
         });
     });
