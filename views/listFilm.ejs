@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/head.css">
         <script src="/javascripts/main/app.js"></script>
-    </head>
+</head>
 
 </html>
 
@@ -40,16 +40,15 @@
             </ul>
         </nav>
     </div>
-
     <div ng-repeat="todo in todos ">
         <div class="border">
             <div class="text">
-                <p> Tên phim:  {{todo.NameFilm}}</p>
-                <p> Thể loại:  {{todo.StyleFilm}}</p>
+                <p> Tên phim: {{todo.NameFilm}}</p>
+                <p> Thể loại: {{todo.StyleFilm}}</p>
                 <p> {{todo.Month}}</p>
-                <p>{{todo.Year}}</p>
+                <p> {{todo.Year}}</p>
             </div>
-            <img src={{todo.Comment}}>          
+            <img src={{todo.Comment}}>
         </div>
     </div>
 </body>

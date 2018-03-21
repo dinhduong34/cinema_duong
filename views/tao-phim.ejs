@@ -6,11 +6,10 @@
         <link rel="stylesheet" href="/stylesheets/head.css">
         <script src="/javascripts/"></script>
         <script>
-                function ABC()
-                {
-                    alert("Bạn đã đăng phim thành công :) :)")
-                }
-            </script>
+            function ABC() {
+                alert("Bạn đã đăng phim thành công :) :)")
+            }
+        </script>
 </head>
 
 <body>
@@ -41,7 +40,7 @@
         </nav>
     </div>
     <div>
-        <h1 class="text-center title" >Tạo phim mới</h1>
+        <h1 class="text-center title">Tạo phim mới</h1>
     </div>
 
     <div>
@@ -51,9 +50,14 @@
                     <div>
                         <img id "image" src="/images/image.png" alt="err">
                     </div>
+                        <!-- // upload file image -->
                     <div>
-                        <input type="file" value="Ảnh" id="">
+                        <form ref='uploadForm' id='uploadForm' action='http://localhost:8000/upload' method='post' encType="multipart/form-data">
+                            <input type="file" name="image" />
+                            <input type='submit' value='Upload!' />
+                        </form>
                     </div>
+                    <!--  -->
                 </div>
                 <div class="col-md-6">
                     Tên bộ phim:
@@ -91,7 +95,7 @@
                                 <option value="tháng 1">Tháng 1</option>
                                 <option value="tháng 2">Tháng 2</option>
                                 <option value="tháng 3">Tháng 3</option>
-                                 <!-- console.log("Ten Phim: " + req.body.NameFilm);
+                                <!-- console.log("Ten Phim: " + req.body.NameFilm);
                                     console.log("The Loai phim: " + req.body.StyleFilm) 
                                     console.log("Nam phat hanh phim: " +req.body.month + req.body.year);
                                     console.log("Binh luan: " + req.body.Comment);ion> -->
@@ -134,9 +138,8 @@
                 <button type="submit" value="Đăng Phim" onclick="ABC()"> Đăng phim</button>
                 <button type="submit"> Bạn cần đăng nhập</button>
             </div>
-
         </form>
-      
+
     </div>
 </body>
 
